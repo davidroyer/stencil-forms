@@ -7,9 +7,12 @@ export declare class FormInput {
      * The input value
      */
     value: string;
+    /**
+     * The `id` for the input
+     */
     inputId: string;
     /**
-     * The first name
+     * The label text
      */
     label: string;
     handleChange(event: any): void;

@@ -16,9 +16,13 @@ export class FormInput {
      */
     @State() value = '';
 
-    @Prop() inputId: string = null;
     /**
-     * The first name
+     * The `id` for the input
+     */
+    @Prop() inputId: string = null;
+
+    /**
+     * The label text
      */
     @Prop() label: string = null;
 

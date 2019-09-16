@@ -9,9 +9,12 @@ export class FormInput {
          * The input value
          */
         this.value = '';
+        /**
+         * The `id` for the input
+         */
         this.inputId = null;
         /**
-         * The first name
+         * The label text
          */
         this.label = null;
     }
@@ -43,7 +46,7 @@ export class FormInput {
             "optional": false,
             "docs": {
                 "tags": [],
-                "text": ""
+                "text": "The `id` for the input"
             },
             "attribute": "input-id",
             "reflect": false,
@@ -61,7 +64,7 @@ export class FormInput {
             "optional": false,
             "docs": {
                 "tags": [],
-                "text": "The first name"
+                "text": "The label text"
             },
             "attribute": "label",
             "reflect": false,
