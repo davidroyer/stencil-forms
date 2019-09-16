@@ -8,7 +8,7 @@ import { Component, Prop, h, State } from '@stencil/core';
 @Component({
     tag: 'form-input',
     styleUrl: 'form-input.css',
-    shadow: true,
+    // shadow: true,
 })
 export class FormInput {
     /**
@@ -30,7 +30,13 @@ export class FormInput {
         return (
             <div class="form-field-wrapper">
                 <label htmlFor={this.inputId}>{this.label}</label>
-                <input id={this.inputId} type="text" value={this.value} onInput={event => this.handleChange(event)} />
+                <input
+                    id={this.inputId}
+                    name={this.inputId}
+                    type="text"
+                    value={this.value}
+                    onInput={event => this.handleChange(event)}
+                />
             </div>
         );
     }

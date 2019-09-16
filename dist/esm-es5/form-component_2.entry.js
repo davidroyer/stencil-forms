@@ -6,11 +6,25 @@ var MyName = /** @class */ (function () {
          * Sets whether the form is a Step Form
          */
         this.stepForm = false;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        this.formData = {
+            firstName: '',
+            lastName: '',
+        };
     }
     MyName.prototype.handleSubmit = function (e) {
         e.preventDefault();
-        console.log(this.value);
-        console.log('this.el', this.el);
+        var sForm = document.getElementById('s-form');
+        console.log('Form:', sForm);
+        // const FormElements = Array.from(sForm.elements);
+        // FormElements.forEach(field => {
+        //     const newObj = { [field.id]: field.value };
+        //     this.formData = { ...this.formData, ...newObj };
+        // });
+        // const { $elm$, ...goodData } = this.formData;
+        // this.formData = { ...goodData };
+        // console.info('Form Data', this.formData);
+        // alert('See Values In Console.');
         // send data to our backend
     };
     MyName.prototype.handleChange = function (event) {
@@ -18,7 +32,7 @@ var MyName = /** @class */ (function () {
     };
     MyName.prototype.render = function () {
         var _this = this;
-        return (h("form", { onSubmit: function (e) { return _this.handleSubmit(e); } }, h("form-input", { "input-id": "firstName", label: "First Name" }), h("form-input", { "input-id": "lastName", label: "Last Name" }), h("input", { type: "submit", value: "Submit" })));
+        return (h("div", { class: "form-wrapper" }, h("form", { id: "s-form", onSubmit: function (e) { return _this.handleSubmit(e); } }, h("form-input", { "input-id": "firstName", label: "First Name" }), h("form-input", { "input-id": "lastName", label: "Last Name" }), h("input", { id: "submitButton", type: "submit", value: "Submit" }))));
     };
     Object.defineProperty(MyName.prototype, "el", {
         get: function () { return getElement(this); },
@@ -50,7 +64,7 @@ var FormInput = /** @class */ (function () {
     };
     FormInput.prototype.render = function () {
         var _this = this;
-        return (h("div", { class: "form-field-wrapper" }, h("label", { htmlFor: this.inputId }, this.label), h("input", { id: this.inputId, type: "text", value: this.value, onInput: function (event) { return _this.handleChange(event); } })));
+        return (h("div", { class: "form-field-wrapper" }, h("label", { htmlFor: this.inputId }, this.label), h("input", { id: this.inputId, name: this.inputId, type: "text", value: this.value, onInput: function (event) { return _this.handleChange(event); } })));
     };
     Object.defineProperty(FormInput, "style", {
         get: function () { return "input,label{display:block}input{font-size:16px;color:#00f}"; },

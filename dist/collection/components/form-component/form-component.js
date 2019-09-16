@@ -5,24 +5,38 @@ export class MyName {
          * Sets whether the form is a Step Form
          */
         this.stepForm = false;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        this.formData = {
+            firstName: '',
+            lastName: '',
+        };
     }
     handleSubmit(e) {
         e.preventDefault();
-        console.log(this.value);
-        console.log('this.el', this.el);
+        const sForm = document.getElementById('s-form');
+        console.log('Form:', sForm);
+        // const FormElements = Array.from(sForm.elements);
+        // FormElements.forEach(field => {
+        //     const newObj = { [field.id]: field.value };
+        //     this.formData = { ...this.formData, ...newObj };
+        // });
+        // const { $elm$, ...goodData } = this.formData;
+        // this.formData = { ...goodData };
+        // console.info('Form Data', this.formData);
+        // alert('See Values In Console.');
         // send data to our backend
     }
     handleChange(event) {
         this.value = event.target.value;
     }
     render() {
-        return (h("form", { onSubmit: e => this.handleSubmit(e) },
-            h("form-input", { "input-id": "firstName", label: "First Name" }),
-            h("form-input", { "input-id": "lastName", label: "Last Name" }),
-            h("input", { type: "submit", value: "Submit" })));
+        return (h("div", { class: "form-wrapper" },
+            h("form", { id: "s-form", onSubmit: e => this.handleSubmit(e) },
+                h("form-input", { "input-id": "firstName", label: "First Name" }),
+                h("form-input", { "input-id": "lastName", label: "Last Name" }),
+                h("input", { id: "submitButton", type: "submit", value: "Submit" }))));
     }
     static get is() { return "form-component"; }
-    static get encapsulation() { return "shadow"; }
     static get originalStyleUrls() { return {
         "$": ["form-component.css"]
     }; }
@@ -50,7 +64,8 @@ export class MyName {
         }
     }; }
     static get states() { return {
-        "value": {}
+        "value": {},
+        "formData": {}
     }; }
     static get elementRef() { return "el"; }
 }

@@ -9,6 +9,7 @@ export declare class MyName {
      */
     el: HTMLElement;
     value: string;
+    formData: Record<string, string>;
     handleSubmit(e: any): void;
     handleChange(event: any): void;
     render(): any;

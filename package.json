@@ -9,7 +9,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/wiley-forms/wiley-forms.js",
+  "unpkg": "dist/stencil-forms/stencil-forms.js",
   "files": [
     "dist/",
     "loader/"
