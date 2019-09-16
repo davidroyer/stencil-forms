@@ -33,8 +33,8 @@ export class MyName {
     render() {
         return (
             <form onSubmit={e => this.handleSubmit(e)}>
-                <form-input label="First Name" />
-                <form-input label="Last Name" />
+                <form-input input-id="firstName" label="First Name" />
+                <form-input input-id="lastName" label="Last Name" />
                 <input type="submit" value="Submit" />
             </form>
         );

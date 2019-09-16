@@ -19,7 +19,7 @@ export class FormInput {
         this.value = event.target.value;
     }
     render() {
-        return (h("div", { class: "form-field-wrappe" },
+        return (h("div", { class: "form-field-wrapper" },
             h("label", { htmlFor: this.inputId }, this.label),
             h("input", { id: this.inputId, type: "text", value: this.value, onInput: event => this.handleChange(event) })));
     }

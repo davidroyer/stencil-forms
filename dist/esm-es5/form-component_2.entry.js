@@ -18,7 +18,7 @@ var MyName = /** @class */ (function () {
     };
     MyName.prototype.render = function () {
         var _this = this;
-        return (h("form", { onSubmit: function (e) { return _this.handleSubmit(e); } }, h("form-input", { label: "First Name" }), h("form-input", { label: "Last Name" }), h("input", { type: "submit", value: "Submit" })));
+        return (h("form", { onSubmit: function (e) { return _this.handleSubmit(e); } }, h("form-input", { "input-id": "firstName", label: "First Name" }), h("form-input", { "input-id": "lastName", label: "Last Name" }), h("input", { type: "submit", value: "Submit" })));
     };
     Object.defineProperty(MyName.prototype, "el", {
         get: function () { return getElement(this); },
@@ -50,7 +50,7 @@ var FormInput = /** @class */ (function () {
     };
     FormInput.prototype.render = function () {
         var _this = this;
-        return (h("div", { class: "form-field-wrappe" }, h("label", { htmlFor: this.inputId }, this.label), h("input", { id: this.inputId, type: "text", value: this.value, onInput: function (event) { return _this.handleChange(event); } })));
+        return (h("div", { class: "form-field-wrapper" }, h("label", { htmlFor: this.inputId }, this.label), h("input", { id: this.inputId, type: "text", value: this.value, onInput: function (event) { return _this.handleChange(event); } })));
     };
     Object.defineProperty(FormInput, "style", {
         get: function () { return "input,label{display:block}input{font-size:16px;color:#00f}"; },

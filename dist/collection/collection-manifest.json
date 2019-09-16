@@ -1,8 +1,8 @@
 {
   "entries": [
-    "components/example-component/example-component.js",
     "components/form-component/form-component.js",
     "components/form-input/form-input.js",
+    "components/example-component/example-component.js",
     "components/my-component/my-component.js"
   ],
   "compiler": {

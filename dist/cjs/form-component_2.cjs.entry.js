@@ -22,7 +22,7 @@ const MyName = class {
         this.value = event.target.value;
     }
     render() {
-        return (core.h("form", { onSubmit: e => this.handleSubmit(e) }, core.h("form-input", { label: "First Name" }), core.h("form-input", { label: "Last Name" }), core.h("input", { type: "submit", value: "Submit" })));
+        return (core.h("form", { onSubmit: e => this.handleSubmit(e) }, core.h("form-input", { "input-id": "firstName", label: "First Name" }), core.h("form-input", { "input-id": "lastName", label: "Last Name" }), core.h("input", { type: "submit", value: "Submit" })));
     }
     get el() { return core.getElement(this); }
     static get style() { return ":host{display:block}"; }
@@ -45,7 +45,7 @@ const FormInput = class {
         this.value = event.target.value;
     }
     render() {
-        return (core.h("div", { class: "form-field-wrappe" }, core.h("label", { htmlFor: this.inputId }, this.label), core.h("input", { id: this.inputId, type: "text", value: this.value, onInput: event => this.handleChange(event) })));
+        return (core.h("div", { class: "form-field-wrapper" }, core.h("label", { htmlFor: this.inputId }, this.label), core.h("input", { id: this.inputId, type: "text", value: this.value, onInput: event => this.handleChange(event) })));
     }
     static get style() { return "input,label{display:block}input{font-size:16px;color:#00f}"; }
 };

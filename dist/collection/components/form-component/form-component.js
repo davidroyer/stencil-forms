@@ -17,8 +17,8 @@ export class MyName {
     }
     render() {
         return (h("form", { onSubmit: e => this.handleSubmit(e) },
-            h("form-input", { label: "First Name" }),
-            h("form-input", { label: "Last Name" }),
+            h("form-input", { "input-id": "firstName", label: "First Name" }),
+            h("form-input", { "input-id": "lastName", label: "Last Name" }),
             h("input", { type: "submit", value: "Submit" })));
     }
     static get is() { return "form-component"; }

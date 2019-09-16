@@ -18,7 +18,7 @@ const MyName = class {
         this.value = event.target.value;
     }
     render() {
-        return (h("form", { onSubmit: e => this.handleSubmit(e) }, h("form-input", { label: "First Name" }), h("form-input", { label: "Last Name" }), h("input", { type: "submit", value: "Submit" })));
+        return (h("form", { onSubmit: e => this.handleSubmit(e) }, h("form-input", { "input-id": "firstName", label: "First Name" }), h("form-input", { "input-id": "lastName", label: "Last Name" }), h("input", { type: "submit", value: "Submit" })));
     }
     get el() { return getElement(this); }
     static get style() { return ":host{display:block}"; }
@@ -41,7 +41,7 @@ const FormInput = class {
         this.value = event.target.value;
     }
     render() {
-        return (h("div", { class: "form-field-wrappe" }, h("label", { htmlFor: this.inputId }, this.label), h("input", { id: this.inputId, type: "text", value: this.value, onInput: event => this.handleChange(event) })));
+        return (h("div", { class: "form-field-wrapper" }, h("label", { htmlFor: this.inputId }, this.label), h("input", { id: this.inputId, type: "text", value: this.value, onInput: event => this.handleChange(event) })));
     }
     static get style() { return "input,label{display:block}input{font-size:16px;color:#00f}"; }
 };
