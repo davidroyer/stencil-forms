@@ -1,4 +1,4 @@
-import { r as registerInstance, h, H as Host } from './core-072cc3a2.js';
+import { r as registerInstance, h, H as Host } from './core-322d0d6a.js';
 var ExampleComponent = /** @class */ (function () {
     function ExampleComponent(hostRef) {
         registerInstance(this, hostRef);

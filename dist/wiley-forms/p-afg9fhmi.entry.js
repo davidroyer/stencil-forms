@@ -1,1 +1,0 @@
-import{r as t,h as s}from"./p-2fc045b9.js";const n=class{constructor(s){t(this,s)}getText(){return(this.first||"")+((t=this.middle)?` ${t}`:"")+((s=this.last)?` ${s}`:"");var t,s}render(){return s("div",null,s("h2",null,"First component test ",this.getText()),s("h3",null,"Nickname: ",this.nickname))}static get style(){return""}};export{n as my_component};

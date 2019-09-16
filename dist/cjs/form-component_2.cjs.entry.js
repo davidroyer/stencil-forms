@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const core = require('./core-65ae6c2c.js');
+const core = require('./core-a195db71.js');
 
 const MyName = class {
     constructor(hostRef) {
