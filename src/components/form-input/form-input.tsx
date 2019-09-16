@@ -15,8 +15,8 @@ export class FormInput {
      * The input value
      */
     @State() value = '';
-    
-    @Prop() id: string = null;
+
+    @Prop() inputId: string = null;
     /**
      * The first name
      */
@@ -29,8 +29,8 @@ export class FormInput {
     render() {
         return (
             <div class="form-field-wrappe">
-                <label for={this.id}>{this.label}</label>
-                <input id={this.id} type="text" value={this.value} onInput={event => this.handleChange(event)} />
+                <label htmlFor={this.inputId}>{this.label}</label>
+                <input id={this.inputId} type="text" value={this.value} onInput={event => this.handleChange(event)} />
             </div>
         );
     }

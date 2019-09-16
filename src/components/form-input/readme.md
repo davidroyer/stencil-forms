@@ -5,9 +5,10 @@
 
 ## Properties
 
-| Property | Attribute | Description    | Type     | Default |
-| -------- | --------- | -------------- | -------- | ------- |
-| `label`  | `label`   | The first name | `string` | `null`  |
+| Property  | Attribute  | Description    | Type     | Default |
+| --------- | ---------- | -------------- | -------- | ------- |
+| `inputId` | `input-id` |                | `string` | `null`  |
+| `label`   | `label`    | The first name | `string` | `null`  |
 
 
 ## Dependencies

@@ -1,0 +1,1 @@
+import{p as m,b as p}from"./p-2fc045b9.js";m().then(m=>p([["p-o0inv3eo",[[1,"example-component"]]],["p-afg9fhmi",[[1,"my-component",{first:[1],middle:[1],last:[1],nickname:[1]}]]],["p-j0qijmlx",[[1,"form-component",{stepForm:[4,"step-form"],value:[32]}],[1,"form-input",{inputId:[1,"input-id"],label:[1],value:[32]}]]]],m));

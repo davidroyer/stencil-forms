@@ -1,7 +1,7 @@
 {
-  "name": "wiley-forms",
+  "name": "stencil-forms",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Form Components Using Stencil",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -28,7 +28,9 @@
     "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
     "prettier": "^1.18.2"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }

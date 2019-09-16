@@ -4,15 +4,15 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type      | Default |
-| ---------- | ----------- | ----------- | --------- | ------- |
-| `stepForm` | `step-form` |             | `boolean` | `false` |
+| Property   | Attribute   | Description                          | Type      | Default |
+| ---------- | ----------- | ------------------------------------ | --------- | ------- |
+| `stepForm` | `step-form` | Sets whether the form is a Step Form | `boolean` | `false` |
 
 ## Dependencies
 
 ### Depends on
 
-- [form-input](../form-input)
+-   [form-input](../form-input)
 
 ### Graph
 
