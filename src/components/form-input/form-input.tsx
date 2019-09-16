@@ -1,4 +1,4 @@
-import { Component, Prop, h, State } from "@stencil/core";
+import { Component, Prop, h, State } from '@stencil/core';
 
 /**
  * @description
@@ -6,34 +6,32 @@ import { Component, Prop, h, State } from "@stencil/core";
  */
 
 @Component({
-  tag: "form-input",
-  styleUrl: "form-input.css",
-  shadow: true
+    tag: 'form-input',
+    styleUrl: 'form-input.css',
+    shadow: true,
 })
-
-
 export class FormInput {
-  
-  /**
-   * The input value
-   */
-  @State() value: string = '';
-  
-  /**
-   * The first name
-   */
-  @Prop() label: string = null
+    /**
+     * The input value
+     */
+    @State() value = '';
+    
+    @Prop() id: string = null;
+    /**
+     * The first name
+     */
+    @Prop() label: string = null;
 
-  handleChange(event) {
-    this.value = event.target.value;
-  }
+    handleChange(event) {
+        this.value = event.target.value;
+    }
 
-  render() {
-    return (
-      <label>
-        {this.label}
-       <input type="text" value={this.value} onInput={event => this.handleChange(event)} />
-      </label>
-    );
-  }
+    render() {
+        return (
+            <div class="form-field-wrappe">
+                <label for={this.id}>{this.label}</label>
+                <input id={this.id} type="text" value={this.value} onInput={event => this.handleChange(event)} />
+            </div>
+        );
+    }
 }

@@ -14,6 +14,7 @@ export namespace Components {
     'stepForm': boolean;
   }
   interface FormInput {
+    'id': string;
     /**
     * The first name
     */
@@ -79,6 +80,7 @@ declare namespace LocalJSX {
     'stepForm'?: boolean;
   }
   interface FormInput extends JSXBase.HTMLAttributes<HTMLFormInputElement> {
+    'id'?: string;
     /**
     * The first name
     */
