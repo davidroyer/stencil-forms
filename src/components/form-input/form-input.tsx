@@ -28,7 +28,7 @@ export class FormInput {
 
     render() {
         return (
-            <div class="form-field-wrappe">
+            <div class="form-field-wrapper">
                 <label htmlFor={this.inputId}>{this.label}</label>
                 <input id={this.inputId} type="text" value={this.value} onInput={event => this.handleChange(event)} />
             </div>
