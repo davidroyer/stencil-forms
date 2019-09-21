@@ -34,7 +34,7 @@ export class MyName {
             h("form", { id: "s-form", onSubmit: e => this.handleSubmit(e) },
                 h("form-input", { "input-id": "firstName", label: "First Name" }),
                 h("form-input", { "input-id": "lastName", label: "Last Name" }),
-                h("input", { id: "submitButton", type: "submit", value: "Submit" }))));
+                h("button", { id: "submitButton", class: "form-submit-button", type: "submit" }, "Submit"))));
     }
     static get is() { return "form-component"; }
     static get originalStyleUrls() { return {

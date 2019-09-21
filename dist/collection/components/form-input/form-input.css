@@ -1,9 +1,12 @@
 label {
   display: block;
+  font-weight: 700;
 }
 
 input {
   font-size: 16px;
   color: blue;
   display: block;
+  color: #1a202c;
+  line-height: 1.25;
 }

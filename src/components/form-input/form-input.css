@@ -1,9 +1,11 @@
 label {
   display: block;
+  @apply font-bold;
 }
 
 input {
   font-size: 16px;
   color: blue;
   display: block;
+  @apply text-gray-900 leading-tight;
 }

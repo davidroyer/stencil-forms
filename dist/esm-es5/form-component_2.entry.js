@@ -32,7 +32,7 @@ var MyName = /** @class */ (function () {
     };
     MyName.prototype.render = function () {
         var _this = this;
-        return (h("div", { class: "form-wrapper" }, h("form", { id: "s-form", onSubmit: function (e) { return _this.handleSubmit(e); } }, h("form-input", { "input-id": "firstName", label: "First Name" }), h("form-input", { "input-id": "lastName", label: "Last Name" }), h("input", { id: "submitButton", type: "submit", value: "Submit" }))));
+        return (h("div", { class: "form-wrapper" }, h("form", { id: "s-form", onSubmit: function (e) { return _this.handleSubmit(e); } }, h("form-input", { "input-id": "firstName", label: "First Name" }), h("form-input", { "input-id": "lastName", label: "Last Name" }), h("button", { id: "submitButton", class: "form-submit-button", type: "submit" }, "Submit"))));
     };
     Object.defineProperty(MyName.prototype, "el", {
         get: function () { return getElement(this); },
@@ -40,7 +40,7 @@ var MyName = /** @class */ (function () {
         configurable: true
     });
     Object.defineProperty(MyName, "style", {
-        get: function () { return ":host{display:block}"; },
+        get: function () { return ":host{display:block}.form-submit-button{background-color:#4299e1;color:#fff;font-weight:700;padding-top:.5rem;padding-bottom:.5rem;padding-left:1rem;padding-right:1rem;border-radius:9999px;cursor:pointer}.form-submit-button:hover{background-color:#2b6cb0}"; },
         enumerable: true,
         configurable: true
     });
@@ -70,7 +70,7 @@ var FormInput = /** @class */ (function () {
         return (h("div", { class: "form-field-wrapper" }, h("label", { htmlFor: this.inputId }, this.label), h("input", { id: this.inputId, name: this.inputId, type: "text", value: this.value, onInput: function (event) { return _this.handleChange(event); } })));
     };
     Object.defineProperty(FormInput, "style", {
-        get: function () { return "input,label{display:block}input{font-size:16px;color:#00f}"; },
+        get: function () { return "label{font-weight:700}input,label{display:block}input{font-size:16px;color:#00f;color:#1a202c;line-height:1.25}"; },
         enumerable: true,
         configurable: true
     });

@@ -36,10 +36,10 @@ const MyName = class {
         this.value = event.target.value;
     }
     render() {
-        return (core.h("div", { class: "form-wrapper" }, core.h("form", { id: "s-form", onSubmit: e => this.handleSubmit(e) }, core.h("form-input", { "input-id": "firstName", label: "First Name" }), core.h("form-input", { "input-id": "lastName", label: "Last Name" }), core.h("input", { id: "submitButton", type: "submit", value: "Submit" }))));
+        return (core.h("div", { class: "form-wrapper" }, core.h("form", { id: "s-form", onSubmit: e => this.handleSubmit(e) }, core.h("form-input", { "input-id": "firstName", label: "First Name" }), core.h("form-input", { "input-id": "lastName", label: "Last Name" }), core.h("button", { id: "submitButton", class: "form-submit-button", type: "submit" }, "Submit"))));
     }
     get el() { return core.getElement(this); }
-    static get style() { return ":host{display:block}"; }
+    static get style() { return ":host{display:block}.form-submit-button{background-color:#4299e1;color:#fff;font-weight:700;padding-top:.5rem;padding-bottom:.5rem;padding-left:1rem;padding-right:1rem;border-radius:9999px;cursor:pointer}.form-submit-button:hover{background-color:#2b6cb0}"; }
 };
 
 const FormInput = class {
@@ -64,7 +64,7 @@ const FormInput = class {
     render() {
         return (core.h("div", { class: "form-field-wrapper" }, core.h("label", { htmlFor: this.inputId }, this.label), core.h("input", { id: this.inputId, name: this.inputId, type: "text", value: this.value, onInput: event => this.handleChange(event) })));
     }
-    static get style() { return "input,label{display:block}input{font-size:16px;color:#00f}"; }
+    static get style() { return "label{font-weight:700}input,label{display:block}input{font-size:16px;color:#00f;color:#1a202c;line-height:1.25}"; }
 };
 
 exports.form_component = MyName;

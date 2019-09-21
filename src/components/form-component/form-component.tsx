@@ -53,7 +53,10 @@ export class MyName {
                 <form id="s-form" onSubmit={e => this.handleSubmit(e)}>
                     <form-input input-id="firstName" label="First Name" />
                     <form-input input-id="lastName" label="Last Name" />
-                    <input id="submitButton" type="submit" value="Submit" />
+                    <button id="submitButton" class="form-submit-button" type="submit">
+                        Submit
+                    </button>
+                    {/* <input id="submitButton" class="form-submit-button" type="submit" value="Submit" /> */}
                 </form>
             </div>
         );
