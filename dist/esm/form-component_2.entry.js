@@ -32,7 +32,7 @@ const MyName = class {
         this.value = event.target.value;
     }
     render() {
-        return (h("div", { class: "form-wrapper" }, h("form", { id: "s-form", onSubmit: e => this.handleSubmit(e) }, h("form-input", { "input-id": "firstName", label: "First Name" }), h("form-input", { "input-id": "lastName", label: "Last Name" }), h("button", { id: "submitButton", class: "form-submit-button", type: "submit" }, "Submit"))));
+        return (h("div", { class: "form-wrapper" }, h("form", { id: "s-form", onSubmit: e => this.handleSubmit(e) }, h("label", { class: "block mt-4" }, h("span", { class: "text-gray-700" }, "Select A Program"), h("select", { class: "form-select mt-1 block w-full" }, h("option", null, "Select"), h("option", null, "Program A"), h("option", null, "Program B"), h("option", null, "Program C"), h("option", null, "Program D"))), h("form-input", { "input-id": "firstName", label: "First Name" }), h("form-input", { "input-id": "lastName", label: "Last Name" }), h("button", { id: "submitButton", class: "form-submit-button", type: "submit" }, "Submit"))));
     }
     get el() { return getElement(this); }
     static get style() { return ":host{display:block}.form-submit-button{background-color:#4299e1;color:#fff;font-weight:700;padding-top:.5rem;padding-bottom:.5rem;padding-left:1rem;padding-right:1rem;border-radius:9999px;cursor:pointer}.form-submit-button:hover{background-color:#2b6cb0}"; }
@@ -58,7 +58,7 @@ const FormInput = class {
         this.value = event.target.value;
     }
     render() {
-        return (h("div", { class: "form-field-wrapper" }, h("label", { htmlFor: this.inputId }, this.label), h("input", { id: this.inputId, name: this.inputId, type: "text", value: this.value, onInput: event => this.handleChange(event) })));
+        return (h("div", { class: "form-field-wrapper" }, h("label", { htmlFor: this.inputId }, this.label), h("input", { id: this.inputId, name: this.inputId, type: "text", class: "form-input", value: this.value, onInput: event => this.handleChange(event) })));
     }
     static get style() { return "label{font-weight:700}input,label{display:block}input{font-size:16px;color:#00f;color:#1a202c;line-height:1.25}"; }
 };

@@ -38,6 +38,7 @@ export class FormInput {
                     id={this.inputId}
                     name={this.inputId}
                     type="text"
+                    class="form-input"
                     value={this.value}
                     onInput={event => this.handleChange(event)}
                 />

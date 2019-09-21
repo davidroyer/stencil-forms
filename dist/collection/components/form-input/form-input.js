@@ -24,7 +24,7 @@ export class FormInput {
     render() {
         return (h("div", { class: "form-field-wrapper" },
             h("label", { htmlFor: this.inputId }, this.label),
-            h("input", { id: this.inputId, name: this.inputId, type: "text", value: this.value, onInput: event => this.handleChange(event) })));
+            h("input", { id: this.inputId, name: this.inputId, type: "text", class: "form-input", value: this.value, onInput: event => this.handleChange(event) })));
     }
     static get is() { return "form-input"; }
     static get originalStyleUrls() { return {

@@ -32,6 +32,14 @@ export class MyName {
     render() {
         return (h("div", { class: "form-wrapper" },
             h("form", { id: "s-form", onSubmit: e => this.handleSubmit(e) },
+                h("label", { class: "block mt-4" },
+                    h("span", { class: "text-gray-700" }, "Select A Program"),
+                    h("select", { class: "form-select mt-1 block w-full" },
+                        h("option", null, "Select"),
+                        h("option", null, "Program A"),
+                        h("option", null, "Program B"),
+                        h("option", null, "Program C"),
+                        h("option", null, "Program D"))),
                 h("form-input", { "input-id": "firstName", label: "First Name" }),
                 h("form-input", { "input-id": "lastName", label: "Last Name" }),
                 h("button", { id: "submitButton", class: "form-submit-button", type: "submit" }, "Submit"))));

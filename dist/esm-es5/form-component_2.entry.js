@@ -32,7 +32,7 @@ var MyName = /** @class */ (function () {
     };
     MyName.prototype.render = function () {
         var _this = this;
-        return (h("div", { class: "form-wrapper" }, h("form", { id: "s-form", onSubmit: function (e) { return _this.handleSubmit(e); } }, h("form-input", { "input-id": "firstName", label: "First Name" }), h("form-input", { "input-id": "lastName", label: "Last Name" }), h("button", { id: "submitButton", class: "form-submit-button", type: "submit" }, "Submit"))));
+        return (h("div", { class: "form-wrapper" }, h("form", { id: "s-form", onSubmit: function (e) { return _this.handleSubmit(e); } }, h("label", { class: "block mt-4" }, h("span", { class: "text-gray-700" }, "Select A Program"), h("select", { class: "form-select mt-1 block w-full" }, h("option", null, "Select"), h("option", null, "Program A"), h("option", null, "Program B"), h("option", null, "Program C"), h("option", null, "Program D"))), h("form-input", { "input-id": "firstName", label: "First Name" }), h("form-input", { "input-id": "lastName", label: "Last Name" }), h("button", { id: "submitButton", class: "form-submit-button", type: "submit" }, "Submit"))));
     };
     Object.defineProperty(MyName.prototype, "el", {
         get: function () { return getElement(this); },
@@ -67,7 +67,7 @@ var FormInput = /** @class */ (function () {
     };
     FormInput.prototype.render = function () {
         var _this = this;
-        return (h("div", { class: "form-field-wrapper" }, h("label", { htmlFor: this.inputId }, this.label), h("input", { id: this.inputId, name: this.inputId, type: "text", value: this.value, onInput: function (event) { return _this.handleChange(event); } })));
+        return (h("div", { class: "form-field-wrapper" }, h("label", { htmlFor: this.inputId }, this.label), h("input", { id: this.inputId, name: this.inputId, type: "text", class: "form-input", value: this.value, onInput: function (event) { return _this.handleChange(event); } })));
     };
     Object.defineProperty(FormInput, "style", {
         get: function () { return "label{font-weight:700}input,label{display:block}input{font-size:16px;color:#00f;color:#1a202c;line-height:1.25}"; },

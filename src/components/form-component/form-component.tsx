@@ -51,6 +51,16 @@ export class MyName {
         return (
             <div class="form-wrapper">
                 <form id="s-form" onSubmit={e => this.handleSubmit(e)}>
+                    <label class="block mt-4">
+                        <span class="text-gray-700">Select A Program</span>
+                        <select class="form-select mt-1 block w-full">
+                            <option>Select</option>
+                            <option>Program A</option>
+                            <option>Program B</option>
+                            <option>Program C</option>
+                            <option>Program D</option>
+                        </select>
+                    </label>
                     <form-input input-id="firstName" label="First Name" />
                     <form-input input-id="lastName" label="Last Name" />
                     <button id="submitButton" class="form-submit-button" type="submit">
