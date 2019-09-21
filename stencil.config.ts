@@ -26,10 +26,12 @@ export const config: Config = {
     ],
 
     plugins: [
+        require('@tailwindcss/custom-forms'),
         postcss({
             plugins: [
                 require('tailwindcss')('./tailwind.config.js'),
                 require('postcss-nested'),
+                // require('@tailwindcss/custom-forms'),
                 autoprefixer(),
                 // purgecss,
                 // require('cssnano'),
