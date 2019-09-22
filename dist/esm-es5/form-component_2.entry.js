@@ -40,7 +40,7 @@ var MyName = /** @class */ (function () {
         configurable: true
     });
     Object.defineProperty(MyName, "style", {
-        get: function () { return ":host{display:block}.form-submit-button{background-color:#4299e1;color:#fff;font-weight:700;padding-top:.5rem;padding-bottom:.5rem;padding-left:1rem;padding-right:1rem;border-radius:9999px;cursor:pointer}.form-submit-button:hover{background-color:#2b6cb0}"; },
+        get: function () { return ":host{display:block}.form-submit-button{background-color:#4299e1;color:#fff;font-weight:700;padding:.5rem 1rem;border-radius:9999px;cursor:pointer}.form-submit-button:hover{background-color:#2b6cb0}"; },
         enumerable: true,
         configurable: true
     });

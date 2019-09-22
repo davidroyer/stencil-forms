@@ -39,7 +39,7 @@ const MyName = class {
         return (core.h("div", { class: "form-wrapper" }, core.h("form", { id: "s-form", onSubmit: e => this.handleSubmit(e) }, core.h("label", { class: "block mt-4" }, core.h("span", { class: "text-gray-700" }, "Select A Program"), core.h("select", { class: "form-select mt-1 block w-full" }, core.h("option", null, "Select"), core.h("option", null, "Program A"), core.h("option", null, "Program B"), core.h("option", null, "Program C"), core.h("option", null, "Program D"))), core.h("form-input", { "input-id": "firstName", label: "First Name" }), core.h("form-input", { "input-id": "lastName", label: "Last Name" }), core.h("button", { id: "submitButton", class: "form-submit-button", type: "submit" }, "Submit"))));
     }
     get el() { return core.getElement(this); }
-    static get style() { return ":host{display:block}.form-submit-button{background-color:#4299e1;color:#fff;font-weight:700;padding-top:.5rem;padding-bottom:.5rem;padding-left:1rem;padding-right:1rem;border-radius:9999px;cursor:pointer}.form-submit-button:hover{background-color:#2b6cb0}"; }
+    static get style() { return ":host{display:block}.form-submit-button{background-color:#4299e1;color:#fff;font-weight:700;padding:.5rem 1rem;border-radius:9999px;cursor:pointer}.form-submit-button:hover{background-color:#2b6cb0}"; }
 };
 
 const FormInput = class {
